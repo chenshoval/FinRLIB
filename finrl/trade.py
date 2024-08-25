@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from finrl.meta.env_stock_trading.env_stock_papertrading import AlpacaPaperTrading
+from finrl.meta.env_stock_trading.env_stock_papertrading_ibkr import IBKRPaperTrading
 from finrl.test import test
 
 
@@ -50,7 +50,7 @@ def trade(
             )
 
         # initialize paper trading env
-        paper_trading = AlpacaPaperTrading(
+        paper_trading = IBKRPaperTrading(
             ticker_list,
             time_interval,
             drl_lib,
@@ -68,7 +68,7 @@ def trade(
             latency=None,
         )
 
-        # AlpacaPaperTrading.run()  # run paper trading
+        # IBKRPaperTrading.run()  # run paper trading
         paper_trading.run()
         # bug fix run is a instance function not static
 

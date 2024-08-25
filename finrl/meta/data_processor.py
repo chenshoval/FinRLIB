@@ -27,7 +27,8 @@ class DataProcessor:
 
         elif data_source == "yahoofinance":
             self.processor = YahooFinance()
-
+        elif data_source == "ibkr_yf":
+            self.processor = YahooFinance() # TODO implement here a ibkr processor for getting the funds
         else:
             raise ValueError("Data source input is NOT supported yet.")
 
